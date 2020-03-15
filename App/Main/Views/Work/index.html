@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block title %}Работа в грузовом такси{% endblock %}
+
+{% block body %}
+<section id="other_content">
+    <div class="wrapper">
+        <h1>Работа в грузовом такси</h1>
+        <p>Для работы в такси отправьте, пожалуйста, заявку</p>
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <form class="form-horizontal" method="post">
+                    <fieldset>
+
+                        <!-- Form Name -->
+                        <legend>Заявка на работу в службу такси МИРА</legend>
+
+                        <!-- Text input-->
+                        <div class="form-group">
+                            <label class="col-md-12 control-label" for="lastName">Фамилия</label>
+                            <div class="col-md-12">
+                                <input id="lastName" name="lastName" type="text" placeholder=""
+                                       class="form-control input-md" required="">
+
+                            </div>
+                        </div>
+
+                        <!-- Text input-->
+                        <div class="form-group">
+                            <label class="col-md-12 control-label" for="firstName">Имя</label>
+                            <div class="col-md-12">
+                                <input id="firstName" name="firstName" type="text" placeholder=""
+                                       class="form-control input-md" required="">
+
+                            </div>
+                        </div>
+
+                        <!-- Text input-->
+                        <div class="form-group">
+                            <label class="col-md-12 control-label" for="patronymicName">Отчество</label>
+                            <div class="col-md-12">
+                                <input id="patronymicName" name="patronymicName" type="text" placeholder=""
+                                       class="form-control input-md">
+
+                            </div>
+                        </div>
+
+                        <!-- Text input-->
+                        <div class="form-group">
+                            <label class="col-md-12 control-label" for="phone">Телефон</label>
+                            <div class="col-md-12">
+                                <input id="phone" name="phone" type="text" placeholder="" class="form-control input-md"
+                                       required=""
+                                       pattern="^(\+7|8)[\.\-\s]*\(?\d{3}\)?[\.\-\s]*\d{3}[\.\-\s]*\d{2}[\.\-\s]*\d{2}$">
+                            </div>
+                        </div>
+
+                        <!-- Textarea -->
+                        <div class="form-group">
+                            <label class="col-md-12 control-label" for="message">Сообщение</label>
+                            <div class="col-md-12">
+                                <textarea class="form-control" id="message" name="message">предварительная информация о марке автомобиля, годе выпуска, владельце, а также контактные данные</textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <input class="btn btn-primary" type="submit" value="Отправить">
+                        </div>
+                    </fieldset>
+
+                </form>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+</section>
+{% endblock %}
