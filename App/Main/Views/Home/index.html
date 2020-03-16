@@ -4,22 +4,16 @@
 
 {% block body %}
 <section id="intro">
-        <div id="nepokaz">
-            <img src="/assets/images/logo.png" alt="Logo Taxi MIRA"/>
+    <div id="nepokaz">
+        <img src="/assets/images/logo.png" alt="Logo Taxi MIRA"/>
+    </div>
+    <div class="wrapper  cnt">
+        <div class="title">
+            <div class="bredcr"></div>
+            <h1>Заказать грузовое такси в Курске</h1>
+            <p class="opis">Цена поездки известна заранее. Быстрая подача авто.</p>
         </div>
-        <div class="wrapper  cnt">
-            <div class="title">
-                <div class="bredcr"></div>
-                <h1>Заказать грузовое такси в Курске от 300 рублей</h1>
-                <p class="opis">Цена поездки известна заранее. Быстрая подача авто.</p>
-            </div>
-        </div>
-</section>
-<section id="order">
-<!--&lt;!&ndash;SeDi&ndash;&gt;-->
-<!--<noscript>Для полной функциональности этого сайта необходимо включить JavaScript. Посмотрите <a href="https://www.enable-javascript.com/ru/" target="_blank">инструкции, как включить JavaScript в вашем браузере</a>.</noscript>-->
-<!--<div id="sedi-orderform3" data-city="Обоянь">форма заказа</div>-->
-<!--&lt;!&ndash;SeDi&ndash;&gt;-->
+    </div>
 </section>
 <section id="krasota">
     {% include 'Services/services.html' %}
@@ -101,5 +95,14 @@
         </div>
     </div>
     </div>
+</section>
+<section id="order">
+    <!--SeDi-->
+    <noscript>Для полной функциональности этого сайта необходимо включить JavaScript. Посмотрите <a
+            href="https://www.enable-javascript.com/ru/" target="_blank">инструкции, как включить JavaScript в вашем
+        браузере</a>.
+    </noscript>
+    <div id="sedi-orderform3" data-city="Курск">форма заказа</div>
+    <!--SeDi-->
 </section>
 {% endblock %}
