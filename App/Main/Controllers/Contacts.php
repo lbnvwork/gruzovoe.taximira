@@ -3,6 +3,7 @@
 
 namespace App\Main\Controllers;
 
+use App\Data;
 use Core\Controller;
 use Core\View;
 
@@ -17,9 +18,10 @@ class Contacts extends Controller
      */
     public function indexAction(): void
     {
+        $data = (new Data())->getBaseData();
         View::renderTemplate(
             'Contacts/index.html',
-            $this->route_params['group'], []
+            $this->route_params['group'], $data
         );
     }
 }

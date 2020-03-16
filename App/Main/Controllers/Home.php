@@ -2,6 +2,7 @@
 
 namespace App\Main\Controllers;
 
+use App\Data;
 use App\Tasks\Models\TaskBook;
 use Core\Controller;
 use Core\View;
@@ -23,9 +24,11 @@ class Home extends Controller
      */
     public function indexAction(): void
     {
+
+        $data = (new Data())->getBaseData();
         View::renderTemplate(
             'Home/index.html',
-            $this->route_params['group'], []
+            $this->route_params['group'], $data
         );
     }
 }

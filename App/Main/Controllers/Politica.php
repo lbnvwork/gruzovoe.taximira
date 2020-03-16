@@ -4,6 +4,7 @@
 namespace App\Main\Controllers;
 
 
+use App\Data;
 use Core\Controller;
 use Core\View;
 
@@ -18,9 +19,10 @@ class Politica extends Controller
      */
     public function indexAction(): void
     {
+        $data = (new Data())->getBaseData();
         View::renderTemplate(
             'Politica/index.html',
-            $this->route_params['group'], []
+            $this->route_params['group'], $data
         );
     }
 }
