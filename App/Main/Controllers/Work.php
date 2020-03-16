@@ -3,12 +3,9 @@
 
 namespace App\Main\Controllers;
 
-
-use App\Data;
+use App\Main\Models\Repositories\DataManager;
 use Core\Controller;
 use Core\View;
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
 
 class Work extends Controller
 {
@@ -21,7 +18,7 @@ class Work extends Controller
      */
     public function indexAction(): void
     {
-        $data = (new Data())->getBaseData();
+        $data = (new DataManager())->getBaseData();
         View::renderTemplate(
             'Work/index.html',
             $this->route_params['group'], $data

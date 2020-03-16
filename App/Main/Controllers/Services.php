@@ -3,8 +3,7 @@
 
 namespace App\Main\Controllers;
 
-
-use App\Data;
+use App\Main\Models\Repositories\DataManager;
 use Core\Controller;
 use Core\View;
 
@@ -19,7 +18,7 @@ class Services extends Controller
      */
     public function indexAction(): void
     {
-        $data = (new Data())->getBaseData();
+        $data = (new DataManager())->getBaseData();
         View::renderTemplate(
             'Services/index.html',
             $this->route_params['group'], $data

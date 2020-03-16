@@ -3,7 +3,7 @@
 
 namespace App\Main\Controllers;
 
-use App\Data;
+use App\Main\Models\Repositories\DataManager;
 use Core\Controller;
 use Core\View;
 
@@ -18,7 +18,12 @@ class Contacts extends Controller
      */
     public function indexAction(): void
     {
-        $data = (new Data())->getBaseData();
+        $dm = new DataManager();
+        $data = $dm->getBaseData();
+        $data['driversPhoneTel'] = $dm->getContacts()['drivers_phone'];
+        $data['driversPhone'] = implode('', $dm->getMobilPhone($data['driversPhoneTel']));
+        $data['email'] = $dm->getContacts()['mail'];
+        $data['address'] = $dm->getContacts()['address'];
         View::renderTemplate(
             'Contacts/index.html',
             $this->route_params['group'], $data

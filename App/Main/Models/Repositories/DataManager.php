@@ -1,15 +1,17 @@
 <?php
 
 
-namespace App;
+namespace App\Main\Models\Repositories;
 
 
-class Data
+class DataManager
 {
     private const CONTENT = [
         'contacts' => [
             'order_phone' => '84712748494',
-            'drivers_phone' => '89096559585'
+            'drivers_phone' => '89096559585',
+            'mail' => 'taxi.kursk@yandex.ru',
+            'address' => 'Курская область, город Курск, Проспект Хрущева 22'
         ]
     ];
 
@@ -38,9 +40,15 @@ class Data
             ],
             'orderPhoneBottom' => implode('', $orderPhone),
             'orderPhoneTel' => self::CONTENT['contacts']['order_phone'],
-            'driversPhone' => implode('', $driversPhone),
-            'driversPhoneTel' => self::CONTENT['contacts']['drivers_phone'],
-
         ];
+    }
+
+    public function __call($name, $arguments) {
+        // Замечание: значение $name регистрозависимо.
+        $key = substr(strtolower($name), 3);
+        if(array_key_exists($key, self::CONTENT)){
+            return self::CONTENT[$key];
+        }
+        return null;
     }
 }
