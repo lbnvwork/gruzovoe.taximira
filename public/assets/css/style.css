@@ -17,7 +17,7 @@ header {
 
 #intro {
     height: auto;
-    background: url(/assets/images/cool_gazel_shadow.jpeg) no-repeat 50% 70%;
+    background: url(/assets/images/cool_gazel_shadow.jpg) no-repeat 50% 70%;
     /*padding-bottom: 20px;*/
     background-size: cover;
     background-attachment: fixed;
@@ -310,7 +310,7 @@ header {
     text-align: center;
 }
 
-.additional-services h2, .about-prices h2, .customers-appreciate h2 {
+.additional-services h2, .about-prices h2, .customers-appreciate h2{
     margin-bottom: 50px;
     text-align: center;
 
@@ -318,6 +318,18 @@ header {
 
     font-size: 38px;
     text-transform: uppercase;
+}
+.customers-appreciate{
+    margin-bottom: 0;
+}
+#order h2, #order h3{
+    text-align: center;
+    width: auto;
+    font-size: 38px;
+    text-transform: uppercase;
+}
+#order{
+    padding-top:100px;
 }
 
 
@@ -3013,4 +3025,17 @@ h1 {
 
 .item-content-desc{
     min-height: 140px;
+}
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
 }
