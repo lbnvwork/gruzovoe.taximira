@@ -10,14 +10,27 @@
     <div class="wrapper  cnt">
         <div class="title">
             <div class="bredcr"></div>
-            <h1>Заказать грузовое такси в Курске</h1>
+            <h1>Служба заказа такси TAXIMIRA</h1>
             <p class="opis">Цена поездки известна заранее. Быстрая подача авто.</p>
+            <p class="opis">Заказать ГРУЗОВОЕ ТАКСИ быстро и дешево:</p>
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-2">
+                    <a href="#order" class="button" type>Онлайн</a>
+                </div>
+                <div class="col-md-2">
+                    <a target="_blank" class="button" href="tel:{{orderPhoneTel}}">По телефону</a>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
         </div>
     </div>
 </section>
 <section id="krasota">
+    <div class="additional-services wrapper">
+        <h2>Наши услуги</h2>
     {% include 'Services/services.html' %}
-
+    </div>
     <div class="customers-appreciate wrapper">
         <h2>Наши клиенты ценят в нас</h2>
         <div class="customers-appreciate-item first-child">
@@ -97,10 +110,17 @@
     </div>
 </section>
 <section id="order">
-    <!--SeDi-->
-    <noscript>Для полной функциональности этого сайта необходимо включить JavaScript. Посмотрите <a href="https://www.enable-javascript.com/ru/" target="_blank">инструкции, как включить JavaScript в вашем браузере</a>.</noscript>
-    <div id="sedi-changecity" data-cities="Курск, Обоянь, Москва, Курчатов"></div>
-    <div id="sedi-orderform3" data-city="Курск">форма заказа</div>
-    <!--SeDi-->
+    <h2>ЗАКАЗ ГРУЗОВОГО ТАКСИ</h2>
+    <h3 id="order-phone"><a href="tel:{{orderPhoneTel}}" target="_blank"><span class="sml">{{orderPhoneTop['leftPart']}}</span>{{orderPhoneTop['rightPart']}}</a></h3>
+    <div id="order-form">
+        <!--SeDi-->
+        <noscript>Для полной функциональности этого сайта необходимо включить JavaScript. Посмотрите <a
+                href="https://www.enable-javascript.com/ru/" target="_blank">инструкции, как включить JavaScript в вашем
+            браузере</a>.
+        </noscript>
+        <div id="sedi-changecity" data-cities="Курск, Обоянь, Москва, Курчатов"></div>
+        <div id="sedi-orderform3" data-city="Курск">форма заказа</div>
+        <!--SeDi-->
+    </div>
 </section>
 {% endblock %}
