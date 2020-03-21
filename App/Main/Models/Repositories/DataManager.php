@@ -12,6 +12,14 @@ class DataManager
             'drivers_phone' => '89096559585',
             'mail' => 'taxi.kursk@yandex.ru',
             'address' => 'Курская область, город Курск, Проспект Хрущева 22'
+        ],
+        'prices' => [
+            'freight_order' => '395',
+            'loader_order'  => [
+                'hour' => '250',
+                'min_order_time' => '2',
+                'next_hour' => '250'
+            ]
         ]
     ];
 
