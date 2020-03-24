@@ -41,7 +41,7 @@ class Config
      *
      * @var boolean
      */
-    const SHOW_ERRORS = true;
+    const SHOW_ERRORS = false;
 
     /**
      * Драйвер БД
