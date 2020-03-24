@@ -56,7 +56,7 @@ $router->add(
     ]
 );
 $router->add(
-    'politica', [
+    'politika', [
         'controller' => 'Politica',
         'action' => 'index',
         'method' => ['GET']
