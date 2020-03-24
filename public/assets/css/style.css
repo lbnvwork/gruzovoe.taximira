@@ -23,6 +23,7 @@ header {
     background-attachment: fixed;
     height: 100vh;
 }
+
 /*#intro:after {*/
 /*    content: '';*/
 /*    position: absolute;*/
@@ -41,6 +42,7 @@ header {
     text-align: center;
     /*padding: 50px;*/
 }
+
 #taxsee-form body.bordered .order-form-frame {
     background-color: rgba(255, 255, 255, 0.6) !important;
 }
@@ -313,7 +315,7 @@ header {
     text-align: center;
 }
 
-.additional-services h2, .about-prices h2, .customers-appreciate h2{
+.additional-services h2, .about-prices h2, .customers-appreciate h2 {
     margin-bottom: 50px;
     text-align: center;
 
@@ -322,17 +324,20 @@ header {
     font-size: 38px;
     text-transform: uppercase;
 }
-.customers-appreciate{
+
+.customers-appreciate {
     margin-bottom: 0;
 }
-#order h2, #order h3{
+
+#order h2, #order h3 {
     text-align: center;
     width: auto;
     font-size: 38px;
     text-transform: uppercase;
 }
-#order{
-    padding-top:100px;
+
+#order {
+    padding-top: 100px;
 }
 
 
@@ -3026,7 +3031,7 @@ h1 {
     margin-left: 10px;
 }
 
-.item-content-desc{
+.item-content-desc {
     min-height: 140px;
 }
 
@@ -3042,3 +3047,114 @@ h1 {
     margin: 4px 2px;
     cursor: pointer;
 }
+
+/*begin всплывающий баннер*/
+#msg_pop {
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    position: fixed;
+    z-index: 99999;
+    bottom: 30px;
+    /*left:30px;*/
+    width: 800px;
+    padding: 10px;
+    color: #fff;
+    font-size: 13px;
+    line-height: 30px;
+    left: 50%;
+    margin: 0 -400px;
+    -webkit-box-shadow: 0px 0px 10px #999;
+    -moz-box-shadow: 0px 0px 10px #999;
+    box-shadow: 0px 0px 10px #999;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+}
+
+#msg_pop h4 {
+    margin: 0;
+    text-align: center;
+    font-size: 20px;
+}
+
+#msg_pop p {
+    text-align: center;
+    font-size: 15px;
+}
+
+#msg_pop p a {
+    font-size: 20px;
+    font-weight: bolder;
+    color: white;
+    text-decoration: underline;
+}
+
+.msg_close {
+    display: block;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    line-height: 15px;
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.msg_close:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+    -webkit-animation-name: fadeIn;
+    animation-duration: 0.4s;
+    -webkit-animation-duration: 0.4s;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-timing-function: ease-in-out;
+    visibility: visible !important;
+}
+
+@keyframes fadeIn {
+    0% {
+        transform: scale(0.7);
+        opacity: 0.5;
+    }
+    80% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        -webkit-transform: scale(0.7);
+        opacity: 0.5;
+    }
+    80% {
+        -webkit-transform: scale(1.1);
+    }
+    100% {
+        -webkit-transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 795px) {
+    #msg_pop {
+        display: none !important;
+    }
+}
+
+/*end всплывающий баннер*/

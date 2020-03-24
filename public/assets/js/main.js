@@ -42,3 +42,8 @@ $(window).scroll(function () {
     }
 
 });
+//begin всплывающий баннер
+var delay_popup = 2000;
+var msg_pop = document.getElementById('msg_pop');
+setTimeout("document.getElementById('msg_pop').style.display='block';document.getElementById('msg_pop').className += 'fadeIn';", delay_popup);
+//end всплывающий баннер

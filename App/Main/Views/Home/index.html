@@ -10,7 +10,7 @@
     <div class="wrapper  cnt">
         <div class="title">
             <div class="bredcr"></div>
-            <h1>Служба заказа такси TAXIMIRA</h1>
+            <h1>Служба заказа такси TAXI MIRA</h1>
             <p class="opis">Цена поездки известна заранее. Быстрая подача авто.</p>
             <p class="opis">Заказать ГРУЗОВОЕ ТАКСИ быстро и дешево:</p>
             <div class="row">
@@ -25,11 +25,21 @@
             </div>
         </div>
     </div>
+    <div id="msg_pop">
+        <span class="msg_close"
+              onclick="document.getElementById('msg_pop').style.display='none'; return false;">X</span>
+        <h4>В службе TAXI MIRA также можно заказать легковое такси!</h4>
+        <p>Закажите легковое такси на сайте:
+            <a target="_blank" href="https://taxi-kursk.ru/">taxi-kursk.ru</a>
+            или по телефону:
+            <a target="_blank" href="tel:84712748484">8(4712)74-84-84</a>
+        </p>
+    </div>
 </section>
 <section id="krasota">
     <div class="additional-services wrapper">
         <h2>Наши услуги</h2>
-    {% include 'Services/services.html' %}
+        {% include 'Services/services.html' %}
     </div>
     <div class="customers-appreciate wrapper">
         <h2>Наши клиенты ценят в нас</h2>
@@ -111,7 +121,8 @@
 </section>
 <section id="order">
     <h2>ЗАКАЗ ГРУЗОВОГО ТАКСИ</h2>
-    <h3 id="order-phone"><a href="tel:{{orderPhoneTel}}" target="_blank"><span class="sml">{{orderPhoneTop['leftPart']}}</span>{{orderPhoneTop['rightPart']}}</a></h3>
+    <h3 id="order-phone"><a href="tel:{{orderPhoneTel}}" target="_blank"><span
+            class="sml">{{orderPhoneTop['leftPart']}}</span>{{orderPhoneTop['rightPart']}}</a></h3>
     <div id="order-form">
         <!--SeDi-->
         <noscript>Для полной функциональности этого сайта необходимо включить JavaScript. Посмотрите <a
