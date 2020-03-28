@@ -18,7 +18,7 @@ class Conditions extends Controller
      */
     public function indexAction(): void
     {
-        $data = (new DataManager())->getBaseData();
+        $data = (new DataManager())->getBaseData($this->route_params);
         View::renderTemplate(
             'Conditions/index.html',
             $this->route_params['group'], $data

@@ -1,6 +1,29 @@
 <!DOCTYPE html>
 <html lang="ru">
-{% include 'head.html' %}
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="author" content="Такси Мира"/>
+    <meta http-equiv="Cache-Control" content="private">
+    <meta name="yandex-verification" content="352ebbc131ce4ee7"/>
+    <link rel="icon" href="/assets/images/favicon.ico" type="ico">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.3.1/lumen/bootstrap.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="/assets/css/v10.css"/>
+    <link rel="stylesheet" type="text/css" href="/assets/css/taxi/style.css?5da090a66232a">
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:image" content="/assets/images/logo_zel.png"/>
+    <meta property="og:url" content="https://gruzovoe.taxi-kursk.ru{{meta.url}}" />
+    <meta property="og:title" content="{{meta.title}}"/>
+    <meta property="og:description"
+          content="{{meta.description}}"/>
+    <meta property="og:site_name" content="{{meta.name}}"/>
+    <meta name="description" content="{{meta.description}}"/>
+    <meta name="keywords" content="{{meta.keywords}}"/>
+</head>
 <body>
 <style>
     @media only screen and (max-width: 748px), only screen and (max-device-width: 748px) {

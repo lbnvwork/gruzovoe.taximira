@@ -1,7 +1,10 @@
 {% extends "base.html" %}
 
-{% block title %}Такси{% endblock %}
+{% block title %}<title>{{meta.title}}</title>{% endblock %}
+{% block meta %}
+    {{ parent() }}
 
+{% endblock %}
 {% block body %}
 <section id="intro">
     <div id="nepokaz">

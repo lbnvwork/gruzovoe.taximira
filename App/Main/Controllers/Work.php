@@ -18,7 +18,10 @@ class Work extends Controller
      */
     public function indexAction(): void
     {
-        $data = (new DataManager())->getBaseData();
+        $dm = new DataManager();
+        $data = $dm->getBaseData($this->route_params);
+        $data['driversPhoneTel'] = $dm->getContacts()['drivers_phone'];
+        $data['driversPhone'] = implode('', $dm->getMobilPhone($data['driversPhoneTel']));
         View::renderTemplate(
             'Work/index.html',
             $this->route_params['group'], $data

@@ -18,7 +18,7 @@ class Politica extends Controller
      */
     public function indexAction(): void
     {
-        $data = (new DataManager())->getBaseData();
+        $data = (new DataManager())->getBaseData($this->route_params);
         View::renderTemplate(
             'Politica/index.html',
             $this->route_params['group'], $data

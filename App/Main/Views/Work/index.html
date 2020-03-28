@@ -3,18 +3,19 @@
 {% block title %}Работа в грузовом такси{% endblock %}
 
 {% block body %}
-<section id="other_content">
+<section class="otherr" id="other_content">
     <div class="wrapper">
         <h1>Работа в грузовом такси</h1>
-        <p>Для работы в такси отправьте, пожалуйста, заявку</p>
-        <div class="row">
-            <div class="col-md-3"></div>
-            <div class="col-md-6">
-                <script src="https://yastatic.net/q/forms-frontend-ext/_/embed.js"></script>
-                <iframe src="https://forms.yandex.ru/u/5e6de94a7bbded06e3939164/?iframe=1" frameborder="0" name="ya-form-5e6de94a7bbded06e3939164" width="650"></iframe>
-            </div>
-            <div class="col-md-3"></div>
-        </div>
+        <p>Открыта вакансия для работы в грузовом такси на своей газели!</p>
+        <p>Для связи с работодателем позвоните, пожалуйста, по телефону:<br/>
+            <a href="tel:{{driversPhoneTel}}" target="_blank">
+                <span class="phone_light" style="font-size:20px">{{driversPhone}}</span>
+            </a><br/>
+            или заполните форму:</p>
+
+        <script src="https://yastatic.net/q/forms-frontend-ext/_/embed.js"></script>
+        <iframe src="https://forms.yandex.ru/u/5e6de94a7bbded06e3939164/?iframe=1" frameborder="0"
+                name="ya-form-5e6de94a7bbded06e3939164" width="100%"></iframe>
     </div>
 </section>
 {% endblock %}

@@ -36,7 +36,7 @@ class Error
      * @throws \Twig\Error\RuntimeError
      * @throws \Twig\Error\SyntaxError
      */
-    public static function exceptionHandler(\Exception $exception)
+    public static function exceptionHandler($exception)
     {
         $code = $exception->getCode();
         http_response_code($code);
