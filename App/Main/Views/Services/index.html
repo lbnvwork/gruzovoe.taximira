@@ -5,11 +5,26 @@
 {% block body %}
 <section class="otherr" id="other_content">
     <div class="wrapper">
-        <h1>Услуги грузового такси «Мира»</h1>
+        <h1>Услуги грузового такси «МИРА»</h1>
         <p>Вы можете заказать следующие услуги грузового такси:</p>
         <div class="additional-services wrapper">
         {% include 'Services/services.html' %}
         </div>
     </div>
+</section>
+<section class="wrapper service-articles">
+    <hr class="footerHr">
+    {% for article in serviceArticles %}
+
+    <article id="{{article.name}}">
+        <h2>{{article.title}}</h2>
+        {{article.text|raw}}
+        <p>Для заказа грузчиков, пожалуйста,
+            <a href="/#order">заполните форму</a>
+            или позвоните по телефону: <a href="tel:{{orderPhoneTel}}">{{orderPhoneBottom}}</a>
+        </p>
+        <hr class="footerHr">
+    </article>
+    {% endfor %}
 </section>
 {% endblock %}

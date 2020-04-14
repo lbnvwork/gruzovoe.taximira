@@ -18,10 +18,13 @@ class Services extends Controller
      */
     public function indexAction(): void
     {
-        $data = (new DataManager())->getBaseData($this->route_params);
+        $dm = new DataManager();
+        $data = $dm->getBaseData($this->route_params);
+        $data['serviceArticles'] = $dm->getServiceArticles();
         View::renderTemplate(
             'Services/index.html',
-            $this->route_params['group'], $data
+            $this->route_params['group'],
+            $data
         );
     }
 }

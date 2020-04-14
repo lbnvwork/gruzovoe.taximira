@@ -2821,6 +2821,23 @@ footer {
 
 }
 
+.service-articles article{
+    padding: 100px 0 50px 0;
+}
+
+.service-articles article h2{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.service-articles article h6 {
+    font-weight: bold;
+}
+
+.service-articles article p {
+    font-size: 16px;
+}
+
 @media screen and (max-width: 560px) {
     .additional-services .additional-services-item, .customers-appreciate .customers-appreciate-item {
         width: 260px;
