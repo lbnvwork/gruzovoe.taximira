@@ -16,21 +16,11 @@
 <div class="left-fixed-gleb">
     <div class="scroll-gleb">
         <ul class="menu-gleb">
+            {% for menuItem in mainMenu %}
             <li>
-                <a href="/" class="aside-menu__link">Главная</a>
+                <a href="/{{menuItem.value}}" class="aside-menu__link">{{menuItem.caption}}</a>
             </li>
-            <li>
-                <a href="/services" class="aside-menu__link">Услуги</a>
-            </li>
-            <li>
-                <a href="/work" class="aside-menu__link">Работа в грузовом такси</a>
-            </li>
-<!--            <li>-->
-<!--                <a href="/news/" class="aside-menu__link">Новости</a>-->
-<!--            </li>-->
-            <li>
-                <a href="/contacts" class="aside-menu__link">Контакты</a>
-            </li>
+            {% endfor %}
         </ul>
     </div>
 </div>

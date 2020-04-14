@@ -187,7 +187,9 @@ header {
     width: 165px;
     font-weight: bolder;
 }
-
+.title strong{
+    text-transform: uppercase;
+}
 .takeTaxi {
     display: inline-block;
 }
@@ -517,7 +519,6 @@ header {
 }
 
 #krasota {
-    min-height: 800px;
     width: 100%;
     background: url(/assets/images/noice.jpg) repeat;
     padding-bottom: 10px;

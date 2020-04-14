@@ -7,21 +7,11 @@
         <div class="highSize">
             <nav>
                 <ul id="Mobmenu">
+                    {% for menuItem in mainMenu %}
                     <li class="main-menu__item">
-                        <a href="/" class="Mobmenu__link">Главная</a>
+                        <a href="/{{menuItem.value}}" class="Mobmenu__link">{{menuItem.caption}}</a>
                     </li>
-                    <li class="main-menu__item">
-                        <a href="/services" class="Mobmenu__link">Услуги</a>
-                    </li>
-                    <li class="main-menu__item">
-                        <a href="/work" class="Mobmenu__link">Работа в такси</a>
-                    </li>
-                    <!--                    <li class="main-menu__item">-->
-                    <!--                        <a href="/news/" class="Mobmenu__link">Новости</a>-->
-                    <!--                    </li>-->
-                    <li class="main-menu__item">
-                        <a href="/contacts" class="Mobmenu__link">Контакты</a>
-                    </li>
+                    {% endfor %}
                 </ul>
             </nav>
         </div>

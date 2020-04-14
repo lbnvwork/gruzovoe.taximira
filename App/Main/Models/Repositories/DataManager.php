@@ -57,6 +57,24 @@ class DataManager
                 'title' => 'Услуги грузового такси «Мира»',
                 'keywords' => 'сервис заказа такси; грузовое такси; услуги грузового такси; междугороднее грузовое такси по России; грузчики; грузовое такси в Курске'
             ],
+        ],
+        'main-menu'=>[
+            [
+                'value' => '',
+                'caption' => 'Главная'
+            ],
+            [
+                'value' => 'services',
+                'caption' => 'Услуги'
+            ],
+            [
+                'value' => 'work',
+                'caption' => 'Работа в такси'
+            ],
+            [
+                'value' => 'contacts',
+                'caption' => 'Контакты'
+            ],
         ]
     ];
 
@@ -97,6 +115,7 @@ class DataManager
             'orderPhoneBottom' => implode('', $orderPhone),
             'orderPhoneTel' => self::CONTENT['contacts']['order_phone'],
             'meta' => $this->getMeta($routeParams),
+            'mainMenu' => self::CONTENT['main-menu']
         ];
     }
 

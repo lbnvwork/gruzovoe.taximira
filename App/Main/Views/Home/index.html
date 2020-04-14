@@ -2,7 +2,7 @@
 
 {% block title %}{{meta.title}}{% endblock %}
 {% block meta %}
-    {{ parent() }}
+{{ parent() }}
 
 {% endblock %}
 {% block body %}
@@ -13,9 +13,9 @@
     <div class="wrapper  cnt">
         <div class="title">
             <div class="bredcr"></div>
-            <h1>Служба заказа такси TAXI MIRA</h1>
+            <h1>Служба заказа такси «Мира»</h1>
             <p class="opis">Цена поездки известна заранее. Быстрая подача авто.</p>
-            <p class="opis">Заказать ГРУЗОВОЕ ТАКСИ быстро и дешево:</p>
+            <p class="opis">Заказать <strong>грузовое такси</strong> быстро и дешево:</p>
             <div class="row">
                 <div class="col-md-4"></div>
                 <div class="col-md-2">
@@ -31,7 +31,7 @@
     <div id="msg_pop">
         <span class="msg_close"
               onclick="document.getElementById('msg_pop').style.display='none'; return false;">X</span>
-        <h4>В службе TAXI MIRA также можно заказать легковое такси!</h4>
+        <h4>В сервисе такси «Мира» также можно заказать легковое такси!</h4>
         <p>Закажите легковое такси на сайте:
             <a target="_blank" href="https://taxi-kursk.ru/">taxi-kursk.ru</a>
             или по телефону:
@@ -39,11 +39,13 @@
         </p>
     </div>
 </section>
-<section id="krasota">
+<section id="services" class="otherr">
     <div class="additional-services wrapper">
         <h2>Наши услуги</h2>
         {% include 'Services/services.html' %}
     </div>
+</section>
+<section id="krasota">
     <div class="customers-appreciate wrapper">
         <h2>Наши клиенты ценят в нас</h2>
         <div class="customers-appreciate-item first-child">
@@ -132,8 +134,8 @@
                 href="https://www.enable-javascript.com/ru/" target="_blank">инструкции, как включить JavaScript в вашем
             браузере</a>.
         </noscript>
-        <div id="sedi-changecity" data-cities="Курск, Обоянь"></div>
-        <div id="sedi-orderform3" data-city="Курск">форма заказа</div>
+        <!--    <div id="sedi-changecity" data-cities="Обоянь"></div>-->
+        <div id="sedi-orderform2" data-city="Курск">форма заказа</div>
         <!--SeDi-->
     </div>
 </section>
