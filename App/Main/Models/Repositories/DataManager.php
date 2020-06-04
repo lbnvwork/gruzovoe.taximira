@@ -7,7 +7,7 @@ class DataManager
 {
     private const CONTENT = [
         'contacts' => [
-            'order_phone' => '84712748494',
+            'order_phone' => '84712221321',
             'drivers_phone' => '89096559585',
             'mail' => 'taxi.kursk@yandex.ru',
             'address' => 'Курская область, город Курск, Проспект Хрущева 22'
@@ -145,15 +145,15 @@ class DataManager
 
     public function getWorkPhone($phoneString)
     {
-        $pattern = '/8(\d{4})(\d{2})(\d{2})(\d{2})/';
-        $replacement = '8 ($1). $2-$3-$4';
+        $pattern = '/8(\d{4})(\d{3})(\d{3})/';
+        $replacement = '8 ($1). $2-$3';
         return explode('.', preg_replace($pattern, $replacement, $phoneString));
     }
 
     public function getMobilPhone($phoneString)
     {
-        $pattern = '/8(\d{3})(\d{3})(\d{2})(\d{2})/';
-        $replacement = '8 ($1). $2-$3-$4';
+        $pattern = '/8(\d{3})(\d{3})(\d{3})/';
+        $replacement = '8 ($1). $2-$3';
         return explode('.', preg_replace($pattern, $replacement, $phoneString));
     }
 
